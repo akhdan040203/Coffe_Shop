@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.js" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Menu Edit</title>
+    <style>
+        body{
+        font-family: 'Yanone Kaffeesatz', sans-serif;
+        background-color: #002B27;
+        } 
+        .navbar{
+          background-color: #09675E;
+          margin-bottom: 35px;
+        }
+        .gallery {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .gallery img {
+      width: 100%;
+      height: auto;
+      margin-bottom: 10px;
+      cursor: pointer;
+    }
+    .gallery img:hover {
+      opacity: 0.8;
+    }
+    .selected {
+      border: 2px solid #09675E;
+    }
+    .custom-file-input::-webkit-file-upload-button {
+      visibility: hidden;
+    }
+    .custom-file-input::before {
+      content: 'Pilih Gambar';
+      display: inline-block;
+      background: #007bff;
+      color: #fff;
+      padding: 5px 10px;
+      outline: none;
+      white-space: nowrap;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      cursor: pointer;
+    }
+    .custom-file-input:hover::before {
+      background-color: #0069d9;
+    }
+    .custom-file-input:active::before {
+      background-color: #0062cc;
+    }
+    #form_edit{
+        padding-top: 80px;
+    }
+    .mb-3{
+        color: #002B27;
+    }
+    .my-container {
+      background-color: #E8DEAB;
+      padding: 20px;
+    }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow-sm">
+        <div class="container">
+          <a class="navbar-brand" href="#"> <img src="Img/Logo Cafe.svg" alt="Logo" width="150px" height="50px"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto fw-semibold">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Menu</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="menukaryawan.html">Karyawan</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    <section id="form_edit">
+        <div class="container edit_menu">
+          <div class="row justify-content-center mt-5">
+            <div class="col-md-6">
+              <div class="card my-container shadow">
+                <div class="card-body">
+                  <h3 class="card-title text-center mb-4">Edit Menu</h3>
+                  <form>
+                    <div class="row fw-semibold">
+                      <div class="col-md-6">
+                        <div class="form-floating mb-3">
+                          <input type="text" class="form-control" id="kode_menu" placeholder="kode_menu">
+                          <label for="kode_menu">Kode Menu</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                          <input type="nama_menu" class="form-control" id="nama_menu" placeholder="nama_menu">
+                          <label for="nama_menu">Nama Menu</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                          <label for="jenis-menu" class="form-label"></label>
+                          <select class="form-select p-3 fw-semibold" id="jenis-menu" name="jenis-menu">
+                          <option value="">Pilih Jenis Menu</option>
+                          <option value="Arabika">Arabika</option>
+                          <option value="Robusta">Robusta</option>
+                          </select>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="harga" placeholder="harga">
+                            <label for="harga">Harga</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="stok" placeholder="stok">
+                            <label for="stok">Stok</label>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-floating mb-3">
+                          <div class="gallery">
+                              <img src="Img/Menu_Gallery/1.png" alt="Image 1" class="rounded">
+                            </div>
+                            <div class="input-group mt-3">
+                              <label class="custom-file-input">
+                                <input type="file" style="display: none;">
+                              </label>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <button type="submit" class="btn btn-success px-3">Submit</button>
+                      <a href="index.html"><button type="submit" class="btn btn-danger px-3 ms-2">Cancel</button></a>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+  <script>
+    // Add click event listener to each image in gallery
+    let images = document.querySelectorAll('.gallery img');
+    images.forEach((image) => {
+      image.addEventListener('click', () => {
+        // Remove "selected" class from all images
+        images.forEach((image) => {
+          image.classList.remove('selected');
+        });
+        // Add "selected" class to clicked image
+        image.classList.add('selected');
+        // Set value of input text to the alt text of clicked image
+        document.querySelector('.input-group input').value = image.alt;
+      });
+    });
+  </script>
+</body>
+</html>

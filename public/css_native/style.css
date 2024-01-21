@@ -1,0 +1,55 @@
+  @import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@400;500;600;700&display=swap');
+  body{
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+        } 
+        .navbar{
+          background-color: #09675E;
+          margin-bottom: 35px;
+        }
+        body{
+          height: 4000px;
+        }
+    .hero-section {
+      height: 910px;
+      background-size: cover;
+      padding-top: 80px;
+    }
+
+    .btn1{
+      background-color: #E8DEAB;
+      color: #002B27;
+    }
+    #about{
+      background-color: #002B27;
+      height: 950px;
+      padding-top: 90px;
+      
+    }
+    .about_us{
+      background-size: cover;
+      padding-top: 130px;
+      height: 500px;    
+      color: #002B27;
+    }
+    #menu{
+      padding-top: 50px;
+    }
+    #menu .plusbuttons{
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+    #menu .menu{
+      color: #002B27;
+    }
+    #menu .menutext{
+      color: #09675E;
+    }
+    .card{
+      background-color: #002B27;
+    }
+    .card .textcard{
+      color: #E8DEAB;
+    }
+    /* #menu{
+      background-color: #B9B9B9;
+    } */

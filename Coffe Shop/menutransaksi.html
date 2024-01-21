@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Transaksi</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+
+    <style>
+        body{
+            background-color: #E8DEAB;
+            font-family: 'Yanone Kaffeesatz', sans-serif;
+            height: 800px;
+        }
+        .card{
+            background-color: #002B27;
+        }
+        .navbar{
+          background-color: #09675E;
+          margin-bottom: 35px;
+        }
+        .my-container{
+            padding: 180px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow-sm">
+        <div class="container">
+          <a class="navbar-brand" href="#"> <img src="Img/Logo Cafe.svg" alt="Logo" width="150px" height="50px"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto fw-semibold fs-5">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#menu">Menu</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Transaksi</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    <section id="transaksi">
+        <div class="container py-5 text-center my-container">
+            <div class="card text-light fs-5 shadow rounded mt-5">
+              <div class="card-header mt-5">
+                <h2 class="text-center fw-bold">Transaksi Coffee</h2>
+              </div>
+              <div class="card-body mt-5 fs-4">
+                <div class="row mb-3 offset-2">
+                  <div class="col-2"><strong>Menu</strong></div>
+                  <div class="col-2"><strong>Image</strong></div>
+                  <div class="col-2"><strong>Quantity</strong></div>
+                  <div class="col-2"><strong>Price/Unit</strong></div>
+                  <div class="col-2"><strong>Total Price</strong></div>
+                </div>
+                <div class="row mb-3 offset-2">
+                  <div class="col-2">Coffee Latte</div>
+                  <div class="col-2"><img src="Img/Menu_Gallery/1.png" width="150px" height="150px"></div>
+                  <div class="col-2">1</div>
+                  <div class="col-2">$5</div>
+                  <div class="col-2">$10</div>
+                </div>
+                <div class="row mb-3 offset-2">
+                  <div class="col-2">Americano</div>
+                  <div class="col-2"><img src="Img/Menu_Gallery/2.png" width="150px" height="150px"></div>
+                  <div class="col-2">1</div>
+                  <div class="col-2">$4</div>
+                  <div class="col-2">$4</div>
+                </div>
+                <div class="row mb-3 offset-2">
+                  <div class="col-2">Black Coffee</div>
+                  <div class="col-2"><img src="Img/Menu_Gallery/3.png" width="150px" height="150px"></div>
+                  <div class="col-2">3</div>
+                  <div class="col-2">$15</div>
+                  <div class="col-2">$45</div>
+                </div>
+                <hr>
+                <div class="row fw-semibold">
+                  <div class="col-8"><strong class="ms-5">Subtotal :</strong></div>
+                  <div class="col-3"><strong class="ms-2">$59</strong></div>
+                </div>
+                <div class="row">
+                    <div class="col-12 offset-3 mt-5">
+                        <a href="menukasir.html" class="btn btn-lg px-4 fw-bold btn-danger">Cancel</a>
+                        <a href="#" class="btn btn-lg px-4 fw-bold btn-success me-2">Buy</a>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+    </section>
+</body>
+<script src="js/bootstrap.min.js"></script>
+</html>
